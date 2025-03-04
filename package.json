@@ -2,7 +2,9 @@
   "name": "@frog-census-amplify-gen-2/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build-app": "nx build frog-census-amplify-gen-2"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.1.0",
