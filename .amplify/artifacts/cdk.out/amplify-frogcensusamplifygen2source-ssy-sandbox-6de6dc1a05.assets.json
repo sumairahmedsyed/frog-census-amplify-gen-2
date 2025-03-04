@@ -1,0 +1,19 @@
+{
+  "version": "39.0.0",
+  "files": {
+    "ab97d072eec9430140ef59319feb1d09ff2ffc779c50aa76d3e9b1e775153dc1": {
+      "source": {
+        "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "ab97d072eec9430140ef59319feb1d09ff2ffc779c50aa76d3e9b1e775153dc1.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,4 +1,4 @@
-import { a, type ClientSchema, defineData } from '@aws-amplify/backend';
+import { a } from '@aws-amplify/backend';
 
 const schema = a.schema({
   notification: a.model({
@@ -29,7 +29,8 @@ const schema = a.schema({
     assessorcomments: a.string(),
     reportedspecies: a.string(),
     dateverified: a.timestamp(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+    photos: a.hasMany('reportphoto', 'id'),
+  }).identifier(['id']),
 
   reportingextent: a.model({
     id: a.id().required(),
@@ -41,14 +42,17 @@ const schema = a.schema({
     CMANAME: a.string(),
     AREASQM: a.float(),
     HECTARES: a.float(),
-  }).secondaryIndexes((index) => [index['geom']]).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  })
+    .identifier(['id'])
+    .secondaryIndexes((index) => [index['geom']]),
 
   reportphoto: a.model({
     id: a.id().required(),
     reportid: a.belongsTo('Report', 'id'),
     filepath: a.string(),
     filesize: a.integer(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  })
+    .identifier(['id']),
 
   reportsound: a.model({
     id: a.id().required(),
@@ -57,13 +61,13 @@ const schema = a.schema({
     soundstarttime: a.timestamp(),
     soundendtime: a.timestamp(),
     filesize: a.integer(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  }),
 
   reportspecies: a.model({
     id: a.id().required(),
     reportid: a.belongsTo('Report', 'id'),
     speciesid: a.integer(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  }),
 
   reportweatherdata: a.model({
     id: a.id().required(),
@@ -77,7 +81,7 @@ const schema = a.schema({
     stationname: a.string(),
     stationid: a.string(),
     failurereason: a.string(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  }),
 
   spatial_ref_sys: a.model({
     srid: a.integer().required(),
@@ -85,7 +89,7 @@ const schema = a.schema({
     auth_srid: a.integer(),
     srtext: a.string(),
     proj4text: a.string(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  }),
 
   spatialarea: a.model({
     geom: a.customType({
@@ -94,7 +98,7 @@ const schema = a.schema({
     }),
     id: a.integer(),
     name: a.string(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  }),
 
   species: a.model({
     id: a.integer().required(),
@@ -106,7 +110,7 @@ const schema = a.schema({
     subcategory: a.string(),
     url1: a.string(),
     url2: a.string(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+  }),
 
   userfeedback: a.model({
     id: a.id().required(),

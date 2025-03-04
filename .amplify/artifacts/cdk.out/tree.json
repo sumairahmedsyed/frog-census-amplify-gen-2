@@ -1,0 +1,89 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05": {
+        "id": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05",
+        "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05",
+        "children": {
+          "deploymentType": {
+            "id": "deploymentType",
+            "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/deploymentType",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.181.1"
+            }
+          },
+          "region": {
+            "id": "region",
+            "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/region",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.181.1"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.181.1"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnCondition",
+                  "version": "2.181.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.4.2"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.181.1"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.181.1"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.181.1"
+        }
+      },
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.4.2"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.181.1"
+    }
+  }
+}
