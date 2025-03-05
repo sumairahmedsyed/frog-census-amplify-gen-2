@@ -1,13 +1,20 @@
-import { a } from '@aws-amplify/backend';
+import { a, ClientSchema, defineData } from '@aws-amplify/backend';
 
 const schema = a.schema({
+  Todo: a.model({
+    content: a.string(),
+    isDone: a.boolean(),
+  }),
+
   notification: a.model({
     id: a.id().required(),
     title: a.string(),
     description: a.string(),
     datecreated: a.timestamp().required(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
-
+  })
+    .identifier(['id']),
+    // .authorization(allow => [allow.publicApiKey()]),
+  //
   report: a.model({
     id: a.id().required(),
     comments: a.string(),
@@ -30,93 +37,115 @@ const schema = a.schema({
     reportedspecies: a.string(),
     dateverified: a.timestamp(),
     photos: a.hasMany('reportphoto', 'id'),
-  }).identifier(['id']),
-
-  reportingextent: a.model({
-    id: a.id().required(),
-    geom: a.customType({
-      id: a.id(),
-      location: a.string(),
-    }),
-    CMA_NO: a.integer(),
-    CMANAME: a.string(),
-    AREASQM: a.float(),
-    HECTARES: a.float(),
+    // sound: a.hasOne('reportsound', 'id'),
+    // species: a.hasMany('species', 'id'),
   })
-    .identifier(['id'])
-    .secondaryIndexes((index) => [index['geom']]),
+    .identifier(['id']),
+    // .authorization(allow => [allow.publicApiKey()]),
+
+  // reportingextent: a.model({
+  //   id: a.id().required(),
+  //   geom: a.customType({
+  //     id: a.id(),
+  //     location: a.string(),
+  //   }),
+  //   CMA_NO: a.integer(),
+  //   CMANAME: a.string(),
+  //   AREASQM: a.float(),
+  //   HECTARES: a.float(),
+  // })
+  //   .identifier(['id'])
+  //   .authorization(allow => [allow.owner()]),
+    // .secondaryIndexes((index) => [index['geom']]),
 
   reportphoto: a.model({
     id: a.id().required(),
-    reportid: a.belongsTo('Report', 'id'),
+    reportid: a.belongsTo('report', 'id'),
     filepath: a.string(),
     filesize: a.integer(),
   })
     .identifier(['id']),
+  //   .authorization(allow => [allow.owner()]),
+  //
+  // reportsound: a.model({
+  //   id: a.id().required(),
+  //   reportid: a.belongsTo('report', 'id'),
+  //   filepath: a.string(),
+  //   soundstarttime: a.timestamp(),
+  //   soundendtime: a.timestamp(),
+  //   filesize: a.integer(),
+  // })
+  //   .identifier(['id']),
+    // .authorization(allow => [allow.owner()]),
 
-  reportsound: a.model({
-    id: a.id().required(),
-    reportid: a.belongsTo('Report', 'id'),
-    filepath: a.string(),
-    soundstarttime: a.timestamp(),
-    soundendtime: a.timestamp(),
-    filesize: a.integer(),
-  }),
+  // reportspecies: a.model({
+  //   id: a.id().required(),
+  //   reportid: a.belongsTo('report', 'id'),
+  //   speciesid: a.integer(),
+  // })
+  //   .identifier(['id'])
+  //   .authorization(allow => [allow.owner()]),
 
-  reportspecies: a.model({
-    id: a.id().required(),
-    reportid: a.belongsTo('Report', 'id'),
-    speciesid: a.integer(),
-  }),
+  // reportweatherdata: a.model({
+  //   id: a.id().required(),
+  //   // reportid: a.belongsTo('report', 'id'),
+  //   airtemp: a.float(),
+  //   rainfallamount: a.float(),
+  //   timesincelastrainfall: a.string(),
+  //   relativehumidity: a.float(),
+  //   windspeed: a.float(),
+  //   weathercomments: a.string(),
+  //   stationname: a.string(),
+  //   stationid: a.string(),
+  //   failurereason: a.string(),
+  // })
+  //   .identifier(['id'])
+  //   .authorization(allow => [allow.owner()]),
 
-  reportweatherdata: a.model({
-    id: a.id().required(),
-    reportid: a.belongsTo('Report', 'id'),
-    airtemp: a.float(),
-    rainfallamount: a.float(),
-    timesincelastrainfall: a.string(),
-    relativehumidity: a.float(),
-    windspeed: a.float(),
-    weathercomments: a.string(),
-    stationname: a.string(),
-    stationid: a.string(),
-    failurereason: a.string(),
-  }),
+  // spatial_ref_sys: a.model({
+  //   srid: a.integer().required(),
+  //   auth_name: a.string(),
+  //   auth_srid: a.integer(),
+  //   srtext: a.string(),
+  //   proj4text: a.string(),
+  // }).authorization(allow => [allow.owner()]),
+  //
+  // spatialarea: a.model({
+  //   geom: a.customType({
+  //     id: a.id(),
+  //     location: a.string(),
+  //   }),
+  //   id: a.integer(),
+  //   name: a.string(),
+  // }).authorization(allow => [allow.owner()]),
 
-  spatial_ref_sys: a.model({
-    srid: a.integer().required(),
-    auth_name: a.string(),
-    auth_srid: a.integer(),
-    srtext: a.string(),
-    proj4text: a.string(),
-  }),
+  // species: a.model({
+  //   id: a.integer().required(),
+  //   reportid: a.belongsTo('report', 'id'),
+  //   category: a.string(),
+  //   description: a.string(),
+  //   name: a.string(),
+  //   photo: a.string(),
+  //   scientificname: a.string(),
+  //   subcategory: a.string(),
+  //   url1: a.string(),
+  //   url2: a.string(),
+  // })
+  //   .identifier(['id'])
+  //   .authorization(allow => [allow.owner()]),
 
-  spatialarea: a.model({
-    geom: a.customType({
-      id: a.id(),
-      location: a.string(),
-    }),
-    id: a.integer(),
-    name: a.string(),
-  }),
+  // userfeedback: a.model({
+  //   id: a.id().required(),
+  //   rating: a.integer().required(),
+  //   comments: a.string(),
+  //   reportername: a.string(),
+  //   reporteremail: a.string(),
+  // })
+  //   .identifier(['id'])
+  //   .authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+}).authorization(allow => [allow.publicApiKey()]);
 
-  species: a.model({
-    id: a.integer().required(),
-    category: a.string(),
-    description: a.string(),
-    name: a.string(),
-    photo: a.string(),
-    scientificname: a.string(),
-    subcategory: a.string(),
-    url1: a.string(),
-    url2: a.string(),
-  }),
-
-  userfeedback: a.model({
-    id: a.id().required(),
-    rating: a.integer().required(),
-    comments: a.string(),
-    reportername: a.string(),
-    reporteremail: a.string(),
-  }).authorization(allow => [allow.owner(), allow.publicApiKey(), allow.authenticated()]),
+export type Schema = ClientSchema<typeof schema>;
+export const data = defineData({
+  schema
 });
