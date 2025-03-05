@@ -1,1 +1,21 @@
 <h1>This is Home!!</h1>
+<div>
+  <form [formGroup]="reportForm">
+    <label for="photo">Add photo</label>
+    <input (change)="onImageSelected($event)" accept="image/*" formControlName="photo" id="photo" type="file">
+    <div *ngIf="imagePreview">
+      <p>Image preview</p>
+      <img [src]="imagePreview" alt="image" width="200">
+    </div>
+    <hr>
+    <label for="sound">Add sound</label>
+    <input (change)="onAudioSelected($event)" accept="audio/*" formControlName="sound" id="sound" type="file">
+    <div *ngIf="soundPreview">
+      <p>Sound preview</p>
+      <audio [src]="soundPreview" controls></audio>
+    </div>
+    <div style="margin-top: 20px">
+      <button (click)="addReport()">Add report</button>
+    </div>
+  </form>
+</div>
