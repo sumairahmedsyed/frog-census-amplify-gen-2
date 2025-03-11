@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build-app": "nx build frog-census-amplify-gen-2"
+    "build-app": "nx build frog-census-amplify-gen-2 --no-cloud"
   },
   "private": true,
   "dependencies": {
