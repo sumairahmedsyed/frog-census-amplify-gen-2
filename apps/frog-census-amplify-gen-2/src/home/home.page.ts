@@ -62,8 +62,23 @@ export class HomePageComponent implements OnInit {
     const file = (event.target as HTMLInputElement).files?.[0];
     if (file) {
       this.selectedSound = file;
-      this.reportForm.get('sound')?.updateValueAndValidity();
-      this.soundPreview = URL.createObjectURL(file);
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.reportForm.get('sound')?.updateValueAndValidity();
+        this.soundPreview = URL.createObjectURL(file);
+        try {
+          uploadData({
+            path: 'sound-submissions/' + file.name,
+            data: file,
+            options: {
+              bucket: 'frog-census-amplify-gen-2-storage',
+            }
+          })
+        } catch (error) {
+          console.error('error uploading sound to storage', error);
+        }
+      };
+      reader.readAsDataURL(file);
     }
   }
 

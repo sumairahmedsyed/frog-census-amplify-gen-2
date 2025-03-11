@@ -1,10 +1,37 @@
 {
+  "auth": {
+    "user_pool_id": "ap-southeast-2_yhLs1ocXd",
+    "aws_region": "ap-southeast-2",
+    "user_pool_client_id": "7mfi5tss9jh5o3vjv9aja1g57o",
+    "identity_pool_id": "ap-southeast-2:7c32d069-201a-4c50-9c63-3a038b0035ce",
+    "mfa_methods": [],
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
+    "groups": [],
+    "mfa_configuration": "NONE",
+    "password_policy": {
+      "min_length": 8,
+      "require_lowercase": true,
+      "require_numbers": true,
+      "require_symbols": true,
+      "require_uppercase": true
+    },
+    "unauthenticated_identities_enabled": true
+  },
   "data": {
     "url": "https://4olfcka7qng4fokms42pi5xcny.appsync-api.ap-southeast-2.amazonaws.com/graphql",
     "aws_region": "ap-southeast-2",
     "api_key": "da2-q2iq37a6krf2rkosmutszuba3u",
     "default_authorization_type": "API_KEY",
     "authorization_types": [
+      "AMAZON_COGNITO_USER_POOLS",
       "AWS_IAM"
     ],
     "model_introspection": {
@@ -1071,7 +1098,23 @@
       {
         "name": "frog-census-amplify-gen-2-storage",
         "bucket_name": "amplify-frogcensusamplify-frogcensusamplifygen2sto-wrnb9bikrca7",
-        "aws_region": "ap-southeast-2"
+        "aws_region": "ap-southeast-2",
+        "paths": {
+          "image-submissions/*": {
+            "guest": [
+              "get",
+              "list",
+              "write"
+            ]
+          },
+          "sound-submissions/*": {
+            "guest": [
+              "get",
+              "list",
+              "write"
+            ]
+          }
+        }
       }
     ]
   },

@@ -22,7 +22,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/97504ca5a1854aa0fcd421312ff608261c44ddedc71025521d0f8abd1667d18b.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/dc99c2bd9970a76d7acf1e53d623af4a1f07f23b4fc58fade3e2d15336d0b1e3.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -63,6 +63,210 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "region"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyAuth/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPool4BA7F805"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyAuth/UserPoolAppClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPoolAppClient2626C6F8"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyAuth/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPool3FDE84CC"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyAuth/authenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthUserPoolE5676EB1Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthUserPoolE5676EB1Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthUserPoolAppClient46490EACRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthUserPoolAppClient46490EACRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/auth.NestedStack/auth.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "auth179371D7"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/userPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userPoolId"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/webClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webClientId"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/identityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "identityPoolId"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/authRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authRegion"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/allowUnauthenticatedIdentities": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "allowUnauthenticatedIdentities"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/signupAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "signupAttributes"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/usernameAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usernameAttributes"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/verificationMechanisms": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "verificationMechanisms"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/passwordPolicyMinLength": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyMinLength"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/passwordPolicyRequirements": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyRequirements"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/mfaConfiguration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaConfiguration"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/mfaTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaTypes"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/socialProviders": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "socialProviders"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/oauthCognitoDomain": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthCognitoDomain"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/oauthScope": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthScope"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/oauthRedirectSignIn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignIn"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/oauthRedirectSignOut": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignOut"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/oauthResponseType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthResponseType"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/oauthClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthClientId"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/groups": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "groups"
           }
         ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/GraphQLAPI/Resource": [
@@ -717,6 +921,24 @@
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/notification/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/notification/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/notification/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/notification.NestedStack/notification.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
@@ -1261,6 +1483,24 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/report/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/report/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/report/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
           }
         ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/report/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDatareportreportDataSource6564CD92Name": [
@@ -1821,6 +2061,24 @@
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportphoto/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportphoto/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportphoto/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportphoto/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDatareportphotoreportphotoDataSource856E5B05Name": [
           {
             "type": "aws:cdk:logicalId",
@@ -2377,6 +2635,24 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportsound/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportsound/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportsound/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
           }
         ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/reportsound/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDatareportsoundreportsoundDataSource3B166E49Name": [
@@ -2937,6 +3213,24 @@
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/species/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/species/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/species/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/species/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataspeciesspeciesDataSourceF5DB8CA3Name": [
           {
             "type": "aws:cdk:logicalId",
@@ -3495,6 +3789,24 @@
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/userfeedback/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/userfeedback/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/userfeedback/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/userfeedback.NestedStack/userfeedback.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
@@ -4039,6 +4351,24 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/UserActivity/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/UserActivity/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/UserActivity/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
           }
         ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/UserActivity.NestedStack/UserActivity.NestedStackResource": [
@@ -4587,6 +4917,24 @@
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ActivityType/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ActivityType/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ActivityType/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ActivityType.NestedStack/ActivityType.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
@@ -5133,6 +5481,24 @@
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPINONEDS82B881AAName"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/Badge/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/Badge/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/Badge/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/Badge.NestedStack/Badge.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
@@ -5353,6 +5719,24 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDatareportphotoNestedStackreportphotoNestedStackResource1A589900Outputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDatareportphotoreportphotoTa76F579E7"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ConnectionStack/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ConnectionStack/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ConnectionStack/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
           }
         ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyData/ConnectionStack/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataspeciesNestedStackspeciesNestedStackResourceCD4428ECOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataspeciesspeciesDataSourceF5DB8CA3Name": [
@@ -5583,6 +5967,30 @@
             "data": "CDKMetadataAvailable"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthUserPoolE5676EB1Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthUserPoolE5676EB1Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthauthenticatedUserRoleED70F31FRef"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthIdentityPool9227C354Ref"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/data/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05dataamplifyDataGraphQLAPI6813763DApiId": [
           {
             "type": "aws:cdk:logicalId",
@@ -5697,6 +6105,18 @@
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/storage/FROG_CENSUS_AMPLIFY_GEN_2_STORAGE_BUCKET_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FROGCENSUSAMPLIFYGEN2STORAGEBUCKETNAMEParameterCE38D834"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/storage/storageAccess4/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storageAccess472A5D2AC"
+          }
+        ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/storage/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
@@ -5707,6 +6127,12 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/storage/reference-to-amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputs.amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authNestedStackauthNestedStackResource7D43927FOutputsamplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05authamplifyAuthunauthenticatedUserRole3D06C051Ref"
           }
         ],
         "/amplify-frogcensusamplifygen2source-ssy-sandbox-6de6dc1a05/storage/amplifyfrogcensusamplifygen2sourcessysandbox6de6dc1a05storagefrogcensusamplifygen2storageBucketF27E22E1Ref": [
