@@ -4,6 +4,7 @@ import type { Schema } from '../../../../amplify/data/resource';
 import { generateClient } from 'aws-amplify/data';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { uploadData } from 'aws-amplify/storage';
 
 const client = generateClient<Schema>();
 
@@ -41,6 +42,17 @@ export class HomePageComponent implements OnInit {
       const reader = new FileReader();
       reader.onload = () => {
         this.imagePreview = reader.result;
+        try {
+          uploadData({
+            path: 'image-submissions/' + file.name,
+            data: file,
+            options: {
+              bucket: 'frog-census-amplify-gen-2-storage',
+            }
+          });
+        } catch (error) {
+          console.error('error uploading image to storage', error);
+        }
       };
       reader.readAsDataURL(file);
     }
