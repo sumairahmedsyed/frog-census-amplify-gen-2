@@ -7,8 +7,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 const client = generateClient<Schema>();
 
-type Report = Schema['report']['type'];
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -70,19 +68,40 @@ export class HomePageComponent implements OnInit {
     }
   }
 
-  addReport() {
+  async addReport() {
     try {
       const photo = this.selectedImage;
       console.log('photo:', photo);
+      const { data: photoObj} = await client.models.reportphoto.create({
+        filepath: photo ? photo.name : '',
+        filesize: photo ? photo.size : 0,
+      });
       const sound = this.selectedSound;
       console.log('sound:', sound);
-      client.models.report.create({
+      const { data: soundObj } = await client.models.reportsound.create({
+        filepath: sound ? sound.name : '',
+        filesize: sound ? sound.size : 0,
+        soundstarttime: new Date().getTime(),
+        soundendtime: new Date().getTime(),
+      });
+      const { data: report } = await client.models.report.create({
         comments: 'This is a test report',
         datecreated: new Date().getTime(),
         datereported: new Date().getTime(),
         datelastupdated: new Date().getTime(),
-        photos: photo ? [{ filepath: photo.name, filesize: photo.size }] : [],
-      })
+      });
+
+      if (photo) {
+        await client.models.reportphoto.update({
+          id: report?.id || '',
+        });
+      }
+      if (sound) {
+        await client.models.reportsound.update({
+          id: report?.id || '',
+        });
+      }
+      console.log('report created:', report);
     } catch (error) {
       console.error('error subscribing to create reports', error);
     }

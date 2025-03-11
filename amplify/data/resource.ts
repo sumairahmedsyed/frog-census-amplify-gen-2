@@ -125,7 +125,27 @@ const schema = a.schema({
     comments: a.string(),
     reportername: a.string(),
     reporteremail: a.string(),
-  }).identifier(['id'])
+  }).identifier(['id']),
+
+  UserActivity: a.model({
+    email: a.string().required(),
+    activityType: a.enum(['startUp', 'reportSubmission', 'reportSubmissionWithSpeciesIdentified', 'reportSubmissionInPeakMonths', 'reportSubmissionWithSpeciesIdentifiedInPeakMonths']),
+    reportId: a.string(),
+    createdAt: a.timestamp(),
+  }).identifier(['email']),
+
+  ActivityType: a.model({
+    id: a.id().required(),
+    activityTypeId: a.enum(['startUp', 'reportSubmission', 'reportSubmissionWithSpeciesIdentified', 'reportSubmissionInPeakMonths', 'reportSubmissionWithSpeciesIdentifiedInPeakMonths']),
+    points: a.integer(),
+  }).identifier(['id']),
+
+  Badge: a.model({
+    id: a.id().required(),
+    name: a.string(),
+    points: a.integer(),
+    icon: a.string(),
+  }).identifier(['id']),
 }).authorization(allow => [allow.publicApiKey()]);
 
 export type Schema = ClientSchema<typeof schema>;
