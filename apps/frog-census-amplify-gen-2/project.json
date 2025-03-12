@@ -24,6 +24,7 @@
         ],
         "styles": [
           "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "node_modules/@aws-amplify/ui-angular/theme.css",
           "apps/frog-census-amplify-gen-2/src/styles.scss"
         ],
         "scripts": [

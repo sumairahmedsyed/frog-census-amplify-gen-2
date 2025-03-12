@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { generateClient } from 'aws-amplify/api';
@@ -22,6 +22,10 @@ export class ExpertReviewListComponent implements OnInit {
 
   reports: Report[] = [];
 
+  constructor(
+    private cdr: ChangeDetectorRef,
+  ) {}
+
   ngOnInit(): void {
     this.listReports();
   }
@@ -30,5 +34,6 @@ export class ExpertReviewListComponent implements OnInit {
     const { data: reports } = await client.models.report.list();
     this.reports = reports as unknown as Report[];
     console.log('reports $$', this.reports);
+    this.cdr.detectChanges();
   }
 }
