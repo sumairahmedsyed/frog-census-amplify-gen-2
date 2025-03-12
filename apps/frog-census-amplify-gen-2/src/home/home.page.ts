@@ -5,6 +5,7 @@ import { generateClient } from 'aws-amplify/data';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { uploadData } from 'aws-amplify/storage';
+import { ExpertReviewListComponent } from '../expert-review/expert-review-list/expert-review-list.page';
 
 const client = generateClient<Schema>();
 
@@ -13,7 +14,7 @@ const client = generateClient<Schema>();
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, ExpertReviewListComponent],
 })
 export class HomePageComponent implements OnInit {
 
@@ -26,6 +27,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
     this.listReports();
+    this.listBadges();
   }
 
   initForm() {
@@ -132,5 +134,11 @@ export class HomePageComponent implements OnInit {
     } catch (error) {
       console.error('error subscribing to create reports', error);
     }
+  }
+
+  async listBadges() {
+    const { data: badges, errors } = await client.models.Badge.list();
+    console.log('badges:', badges);
+    console.log('errors:', errors);
   }
 }

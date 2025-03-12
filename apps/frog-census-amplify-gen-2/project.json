@@ -22,8 +22,13 @@
             "input": "apps/frog-census-amplify-gen-2/public"
           }
         ],
-        "styles": ["apps/frog-census-amplify-gen-2/src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "apps/frog-census-amplify-gen-2/src/styles.scss"
+        ],
+        "scripts": [
+          "node_modules/bootstrap/dist/js/bootstrap.min.js"
+        ]
       },
       "configurations": {
         "production": {

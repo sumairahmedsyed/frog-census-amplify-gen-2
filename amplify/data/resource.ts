@@ -68,10 +68,9 @@ const schema = a.schema({
   // reportspecies: a.model({
   //   id: a.id().required(),
   //   reportid: a.belongsTo('report', 'id'),
-  //   speciesid: a.integer(),
+  //   speciesid: a.belongsTo('species', 'id'),
   // })
-  //   .identifier(['id'])
-  //   .authorization(allow => [allow.owner()]),
+  //   .identifier(['id']),
 
   // reportweatherdata: a.model({
   //   id: a.id().required(),
